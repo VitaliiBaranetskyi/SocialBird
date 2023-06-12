@@ -68,8 +68,8 @@ POST /comments<br>
 Content-Type: application/json<br>
 {<br>
 &nbsp;&nbsp;&nbsp;"content": "This is a good post"<br>
-&nbsp;&nbsp;&nbsp;"authorId": "This is a good post"<br>
-&nbsp;&nbsp;&nbsp;"postId": "This is a good post"<br>
+&nbsp;&nbsp;&nbsp;"authorId": "author-id"<br>
+&nbsp;&nbsp;&nbsp;"postId": "post-id"<br>
 }
 - Delete comment<br>
 DELETE /comments/{commentId}
