@@ -42,14 +42,14 @@ GET /followers/followeesByUser/{userId}
 POST /posts<br>
 Content-Type: application/json<br>
 {<br>
-  "content": "This is my new post!",<br>
-  "authorId": "author-id"<br>
+&nbsp;&nbsp;&nbsp;"content": "This is my new post!",<br>
+&nbsp;&nbsp;&nbsp;"authorId": "author-id"<br>
 }
 - Update post<br>
 PUT /posts/{id}<br>
 Content-Type: application/json<br>
 {<br>
-  "content": "This is my CHANGED post!"<br>
+&nbsp;&nbsp;&nbsp;"content": "This is my CHANGED post!"<br>
 }
 - Delete post (with all likes and comments)<br>
 DELETE /posts/{id}
@@ -67,14 +67,17 @@ GET /posts/post/{postId}
 POST /comments<br>
 Content-Type: application/json<br>
 {<br>
-  "content": "This is a good post"<br>
-  "authorId": "This is a good post"<br>
-  "postId": "This is a good post"<br>
+&nbsp;&nbsp;&nbsp;"content": "This is a good post"<br>
+&nbsp;&nbsp;&nbsp;"authorId": "This is a good post"<br>
+&nbsp;&nbsp;&nbsp;"postId": "This is a good post"<br>
 }
 - Delete comment<br>
 DELETE /comments/{commentId}
 - Get comments by post<br>
 GET /comments/post/{postId}
+# Future plans:
+- Create roles
+- Counting likes and comments
 ## Developer
 Baranetskyi Vitalii
 
