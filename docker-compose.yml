@@ -1,25 +1,22 @@
 version: '3'
-
 services:
   app:
-    image: openjdk:11-jdk
+    image: openjdk:11
     ports:
-      - "8080:8080"
+      - 8080:8080
     volumes:
-      - ./build/libs/SocialBird-0.0.1-SNAPSHOT.jar:/app/SocialBird-0.0.1-SNAPSHOT.jar
-    environment:
-      - SPRING_DATA_MONGODB_URI=mongodb://root:root@mongodb:27017/socialbirddb
-    command: java -jar /app/SocialBird-0.0.1-SNAPSHOT.jar
+      - .:/app
+    working_dir: /app
+    command: ./gradlew bootRun
     depends_on:
       - mongodb
-
   mongodb:
     image: mongo
+    restart: always
     ports:
-      - "27017:27017"
+      - 27017:27017
     volumes:
-      - ./data:/data/db
-    environment:
-      - MONGO_INITDB_ROOT_USERNAME=root
-      - MONGO_INITDB_ROOT_PASSWORD=root
+      - mongo-data:/data/db
 
+volumes:
+  mongo-data:
