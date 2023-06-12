@@ -20,60 +20,60 @@ GET /auth/login?username=name&password=pass
 POST /auth/logout
 Authorization: Bearer your-access-token
 ## Requests that require a token (Authorization: Bearer your-access-token):
-- Get all users
+- Get all users<br>
 GET /users/all
-- Update a user
+- Update a user<br>
 PUT /users/{id}?username=name&password=pass
-- Delete a user
+- Delete a user<br>
 DELETE /users/{id}
-- Get a user by id
+- Get a user by id<br>
 GET /users/{id}
-- Get a user by username
+- Get a user by username<br>
 GET /users?username=name
-- Follow a user
+- Follow a user<br>
 POST /followers/follow?followerId=id1&followeeId=id2
-- Unfollow a user
+- Unfollow a user<br>
 DELETE /followers/unfollow?followerId=id1&followeeId=id2
-- User's followers
+- User's followers<br>
 GET /followers/followersByUser/{userId}
-- User's followees
+- User's followees<br>
 GET /followers/followeesByUser/{userId}
-- Create a post
-POST /posts
-Content-Type: application/json
-{
-  "content": "This is my new post!",
-  "authorId": "author-id"
+- Create a post<br>
+POST /posts<br>
+Content-Type: application/json<br>
+{<br>
+  "content": "This is my new post!",<br>
+  "authorId": "author-id"<br>
 }
-- Update post
-PUT /posts/{id}
-Content-Type: application/json
-{
-  "content": "This is my CHANGED post!"
+- Update post<br>
+PUT /posts/{id}<br>
+Content-Type: application/json<br>
+{<br>
+  "content": "This is my CHANGED post!"<br>
 }
-- Delete post (with all likes and comments)
+- Delete post (with all likes and comments)<br>
 DELETE /posts/{id}
-- Get posts by author
+- Get posts by author<br>
 GET /posts/author/{authorId}
-- Get feed by user (all posts by followees)
+- Get feed by user (all posts by followees)<br>
 GET /posts/feed/{userId}
-- Like the post
+- Like the post<br>
 POST /posts?userId=id1&postId=id2
-- Unlike the post
+- Unlike the post<br>
 DELETE /posts?userId=id1&postId=id2
-- Get likes by post
+- Get likes by post<br>
 GET /posts/post/{postId}
-- Comment the post
-POST /comments
-Content-Type: application/json
-{
-  "content": "This is a good post"
-  "authorId": "This is a good post"
-  "postId": "This is a good post"
+- Comment the post<br>
+POST /comments<br>
+Content-Type: application/json<br>
+{<br>
+  "content": "This is a good post"<br>
+  "authorId": "This is a good post"<br>
+  "postId": "This is a good post"<br>
 }
-- Delete comment
+- Delete comment<br>
 DELETE /comments/{commentId}
-- Get comments by post
+- Get comments by post<br>
 GET /comments/post/{postId}
 ## Developer
 Baranetskyi Vitalii
