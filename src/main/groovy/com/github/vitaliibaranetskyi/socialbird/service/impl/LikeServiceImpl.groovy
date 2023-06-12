@@ -16,7 +16,7 @@ import org.springframework.stereotype.Service
 @Service
 class LikeServiceImpl implements LikeService {
     private final LikeRepository likeRepository
-    private final PostRepository postRepository
+    protected final PostRepository postRepository
     private final UserRepository userRepository
     private final LikeMapper likeMapper
 

@@ -1,8 +1,6 @@
 package com.github.vitaliibaranetskyi.socialbird.service
 
 import com.github.vitaliibaranetskyi.socialbird.dto.UserDTO
-import org.springframework.security.core.Authentication
-import org.springframework.security.core.userdetails.UserDetailsService
 
 interface UserService{
     List<UserDTO> getAllUsers()

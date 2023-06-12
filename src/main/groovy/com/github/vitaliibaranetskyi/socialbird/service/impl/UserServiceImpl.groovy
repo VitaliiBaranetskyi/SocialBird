@@ -28,7 +28,7 @@ class UserServiceImpl implements UserService {
 
     List<UserDTO> getAllUsers() {
         List<User> users = userRepository.findAll()
-        users.collect(userMapper.&toDto) as List<UserDTO>
+        userMapper.toDtoList(users)
     }
 
     UserDTO createUser(String username, String password) {
