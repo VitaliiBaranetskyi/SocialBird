@@ -12,11 +12,11 @@ The main idea is to create an API for a social networking service, similar to Tw
 - Spock
 # Description:
 ## Requests that do not require a token:
-- Register a user
+- Register a user<br>
 POST /users/register?username=name&password=pass
-- User authorization
+- User authorization<br>
 GET /auth/login?username=name&password=pass
-- User logout
+- User logout<br>
 POST /auth/logout
 Authorization: Bearer your-access-token
 ## Requests that require a token (Authorization: Bearer your-access-token):
