@@ -17,7 +17,7 @@ POST /users/register?username=name&password=pass
 - User authorization<br>
 GET /auth/login?username=name&password=pass
 - User logout<br>
-POST /auth/logout
+POST /auth/logout<br>
 Authorization: Bearer your-access-token
 ## Requests that require a token (Authorization: Bearer your-access-token):
 - Get all users<br>
@@ -55,7 +55,7 @@ Content-Type: application/json<br>
 DELETE /posts/{id}
 - Get posts by author<br>
 GET /posts/author/{authorId}
-- Get feed by user (all posts by followees)<br>
+- Get feed by user (All posts by those to whom the user is followed)<br>
 GET /posts/feed/{userId}
 - Like the post<br>
 POST /posts?userId=id1&postId=id2
